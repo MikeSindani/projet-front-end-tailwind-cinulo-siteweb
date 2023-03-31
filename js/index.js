@@ -56,21 +56,21 @@ AOS.init();
          const child = document.querySelectorAll(".child")
          const group = document.querySelectorAll(".group ")
          var i
-         for (i = 0; i <= accordion.length; i++) {
+         //for (i = 0; i <= accordion.length; i++) {
             /*child[i].classList.add("hidden")
             group[i].classList.remove("[&:not([data-te-collapse-collapsed])]:bg-secondary-color")
             group[i].classList.remove("[&:not([data-te-collapse-collapsed])]:bg-white")*/
 
 
-            if (i == v) {
+            
                child[v].classList.remove("hidden")
-               group[i].classList.remove("[&:not([data-te-collapse-collapsed])]:bg-white")
-               group[v].classList.add("bg-secondary-color")
+               //group[i].classList.remove("[&:not([data-te-collapse-collapsed])]:bg-white")
+               //group[v].classList.add("bg-secondary-color")
 
 
-            }
+           
 
-         }
+         
 
 
       }
