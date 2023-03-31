@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="output.css">
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <header class=" flex justify-center p-3">
+        <img src="logo/Cinolu-removebg-preview vert.png" width="50" alt="">
+    </header>
+    <section style="background-color: rgba(0, 0, 0, 0.50);height:15vh;z-index:10;">
+        <div
+            style="background-image: url('img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg');height: 15vh;background-attachment: fixed;">
+        </div>
+    </section>
+    <section class="p-2 flex flex-col justify-center gap-5 my-10">
+        <h1 class="text-black font-bold font-Poppins text-xl text-center">
+            <span class="text-2xl">Formulaire d'inscription</span> <br>
+            pour l'Evement L-Impact
+        </h1>
+        <form class="flex flex-col justify-center items-center gap-3 p-5" action="" ">
+            <label class="w-full grid place-items-center">
+                <span class="text-primary-color text-sm font-Poppins font-bold ">Veillez mettez Votre Nom au Complet</span> <br>
+                <input class="bg-third-color rounded-md w-full md:w-80 h-5 p-5" placeholder="Entre votre Nom Ici"
+                    type="tel"  name="nom" id="" oninput="change(this)">
+                <br>
+            </label>
+            <label class="w-full grid place-items-center">
+                <span class="text-primary-color text-sm font-Poppins font-bold ">Veillez insere votre Numero de telephone</span> <br>
+                <input class="bg-third-color rounded-md w-full md:w-80 h-5 p-5" placeholder="Entre votre Numero Ici"
+                    type="text" name="numero" id="" oninput="change(this)" >
+                <br>
+            </label>
+            <label class="w-full grid place-items-center">
+                <span class="text-primary-color text-sm font-Poppins font-bold text-center">Qui etes vous pour
+                    nous?</span> <br>
+                <select class="bg-third-color text-black rounded-md w-full md:w-80 h-5 p-5" id="participant" name="participant" oninput="change(this)">
+                    <option value="Invite">Invite</option>
+                    <option value="Organisateur">Organisateur</option>
+                    <option value="Intervenant">Intervenant</option>
+                </select>
+            </label>
+            <button class="bg-primary-color rounded-md  text-white px-10 py-2 font-Poppins text-md" onclick="submit()" type="submit">Avoir
+                Mon passse</button>
+        </form>
+    </section>
+    <section id="qr_code_gen" class="bg-slate-100  p-20 ">
+        <div class="bg-white p-5  flex flex-col ">
+            <p class=" font-Poppins text-center">Votre Code Qr est la:</p>
+            <div id="qr_code" class="text-center flex flex-col items-center ">
+                 <img class="qrious">
+            </div>
+
+        </div>
+    </section>
+    <footer class="h-20 w-full bg-secondary-color  text-white flex justify-around items-center">
+        Copyright © Centre d'innovation de Lubumbashi
+    </footer>
+    <script src="qrious/dist/qrious.js"></script>
+    <script>
+
+       const  qr_code = document.querySelector("#qr_code")
+       var nom_complet , participant , numero_tel ; 
+       var valeur;
+
+       window.onload=()=>{
+        valeur = `<img src="img/R.png" width="200" alt="">`
+         //qr_code.innerHTML=valeur;
+       }
+       var qr = new QRious({
+         element:document.querySelector('.qrious'),
+         size:250,
+         value:valeur
+       })
+       function change(params){
+            switch(params.name){
+                case "participant":
+                    participant = params.value
+                    break
+                case "nom":
+                    nom_complet = params.value
+                    break 
+
+                case "numero":
+                    numero_tel = params.value
+                    break 
+            }
+            valeur = nom_complet+" ; "+participant+" ; "+ numero_tel ;
+            qr.value = valeur;
+       }
+       function submit(e){
+         e.preventDefault();
+         alert("Envoyer")
+         document.querySelector("#qr_code_gen").classList.remove('hidden')
+
+       }
+
+    </script>
+    
+</body>
+
+</html>
