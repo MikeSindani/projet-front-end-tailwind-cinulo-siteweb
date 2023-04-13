@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/Cinolu-removebg-preview vert.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="output.css">
+    <title>Formulaire de L-Impact | CINOLU</title>
+</head>
+<style>
+    #overlay,
+    #overlay-connection {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 18px;
+        font-weight: bold;
+
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: inline-block;
+        border-top: 4px solid #000;
+        border-right: 4px solid transparent;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .loader::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border-bottom: 4px solid #6BA735;
+        border-left: 4px solid transparent;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body onload="autoclick()">
+    <header class=" flex justify-center p-3">
+        <img src="logo/Cinolu-removebg-preview vert.png" width="50" alt="">
+    </header>
+    <section style="height:20vh;z-index:10;">
+        <div class="flex justify-center items-center">
+            <img src="logo/logo_L-Impact_bagde.jpg" alt="" width="250">
+        </div>
+    </section>
+    <section class="p-2 flex flex-col justify-center gap-5 ">
+        <h1 class="text-black font-bold font-Poppins text-xl text-center">
+            <span class="text-3xl text-cinq-color">Formulaire d'inscription</span> <br>
+            Pour l'événement L-Impact
+        </h1>
+        <form id="form" class="flex flex-col justify-center items-center gap-3 p-5">
+            <label class=" w-full grid place-items-center">
+                <span class="text-primary-color text-sm font-Poppins font-bold ">Veillez introduire votre nom , postnom et prenom.
+                </span>
+                <br>
+                <input class="bg-third-color rounded-md w-full md:w-80 h-5 p-5" placeholder="Entre votre Nom Ici"
+                    type="text" name="nom" id="nom" oninput="change(this)" required>
+                <br>
+            </label>
+            <label class="w-full grid place-items-center">
+                <span class="text-primary-color text-sm font-Poppins font-bold ">Veillez insère votre Numéro de
+                    Téléphone</span> <br>
+                <input class="bg-third-color rounded-md w-full md:w-80 h-5 p-5" placeholder="Entre votre Numero Ici"
+                    type="tel" name="numero" id="tel" oninput="change(this)" required>
+                <br>
+            </label>
+            <label class="w-full grid place-items-center">
+                <span class="text-primary-color text-sm font-Poppins font-bold text-center">Qui êtes-vous pour
+                    nous?</span> <br>
+                <select class="bg-third-color text-black rounded-md w-full md:w-80 h-5 p-5" id="participant"
+                    name="participant" oninput="change(this)">
+                    <option value="Visiteur">Visiteur</option>
+                    <option value="Coach">Coach</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
+                    <option value="Sponsor">Sponsor</option>
+                </select>
+            </label>
+            <button class="bg-cinq-color rounded-md  text-white px-10 py-2 font-Poppins md:text-md font-semibold text-sm" type="submit">Avoir
+                mon badge</button>
+        </form>
+    </section>
+    <section id="qr_code_gen" class="bg-slate-100  p-10 flex flex-col gap-6 justify-center items-center hidden ">
+        <p class=" font-Poppins text-center text-xl">Voici votre code QR :</p>
+
+        <div id="qr_badge" class="bg-white   flex flex-col h-[450px]  w-[320px] shadow-xl relative">
+            <!--badge-->
+            <div id="badge_img_Coach" class="absolute top-0 " style="display: none;">
+                <img src="badge/L-Impact - badge-1.jpg" alt="" srcset="">
+            </div>
+            <div id="badge_img_Entrepreneur" class="absolute top-0 " style="display: none;">
+                <img src="badge/L-Impact - badge-2.jpg" alt="" srcset="">
+            </div>
+            <div id="badge_img_Sponsor" class="absolute top-0 " style="display: none;">
+                <img src="badge/L-Impact - badge-3.jpg" alt="" srcset="">
+            </div>
+            <div id="badge_img_Visiteur" class="absolute top-0 " style="display: none;">
+                <img src="badge/L-Impact - badge-4.jpg" alt="" srcset="">
+            </div>
+
+            <div id="qr_code" class="text-center flex flex-col gap-5 p-5 items-center absolute top-48 left-[30%] l">
+                <img class="qrious" width="150" height="150" class="rounded-sm">
+            </div>
+        </div>
+
+        <a id="btn-Convert-Html2Image" href="#"
+            class="text-white font-semibold py-2 px-8 rounded-md bg-cinq-color cursor-pointer md:text-md text-sm "><ion-icon
+                name="arrow-down-outline"></ion-icon>Télécharger votre badge</a>
+    </section>
+    <section class="flex flex-col p-2 gap-3 bg-third-color">
+        <hr>
+        <h2 class=" text-black text-xl text-center font-bold">Nous suivre </h2>
+        <div class="flex flex-wrap gap-3 pl-4 justify-center">
+            <div><a class="text-black" href="https://web.facebook.com/cinolu/" target="_blank"><ion-icon
+                        name="logo-facebook" ></ion-icon></a></div>
+            <div><a href=""><ion-icon name="logo-twitter" target="_blank"></ion-icon></a></div>
+            <div><a class="text-black" href="https://www.instagram.com/explore/tags/cinolu/" target="_blank"><ion-icon
+                        name="logo-instagram"></ion-icon></a></div>
+            <div><a class="text-black" href="https://www.linkedin.com/company/cinolu/" target="_blank"><ion-icon
+                        name="logo-linkedin" ></ion-icon></a></div>
+            <div><a class="text-black" href="https://www.youtube.com/@cinolu6261" target="_blank"><ion-icon
+                        name="logo-youtube" ></ion-icon></a></div>
+        </div>
+    </section>
+    <footer class="h-20 w-full bg-secondary-color  text-white flex justify-around items-center">
+        Copyright © Centre d'innovation de Lubumbashi
+    </footer>
+    <!--LOADER-->
+    <div id="overlay">
+        <span class="loader"></span>
+    </div>
+    <div id="overlay-connection">
+        <div id="text" class="flex justify-center items-center flex-col gap-3">
+
+            <img src="svg/undraw_going_offline_ihag.svg" alt="" srcset="" width="100">
+            <p class="text-black">Veillez-Vous connectez</p>
+
+
+        </div>
+    </div>
+    <!--SCRIPTS-->
+    <script src="dist/qrious.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        const qr_code = document.querySelector("#qr_code")
+        var nom_complet, participant, numero_tel;
+        var valeur;
+
+        window.onload = () => {
+            valeur = `<img src="img/R.png" width="200" alt="">`
+            //qr_code.innerHTML=valeur;
+        }
+        var qr = new QRious({
+            element: document.querySelector('.qrious'),
+            size: 90,
+            value: valeur
+        })
+
+        /*function change(params) {
+            switch (params.name) {
+                case "participant":
+                    participant = params.value
+                    document.querySelector("#participant_qr").innerHTML = participant
+                    break
+                case "nom":
+                    nom_complet = params.value
+                    document.querySelector("#nom_complet_qr").innerHTML = nom_complet
+                    break
+
+                case "numero":
+                    numero_tel = params.value
+                    break
+            }
+            valeur = nom_complet + " ; " + participant + " ; " + numero_tel;
+            qr.value = valeur;
+        }*/
+
+        // scroll to badge 
+
+
+        function topFunction() {
+            let number_scroll = 870;
+            document.body.scrollTop = number_scroll; // For Safari
+            document.documentElement.scrollTop = number_scroll; // For Chrome, Firefox, IE and Opera
+        }
+        // code pour le formulaire recupere les informations 
+        let form = document.getElementById("form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            document.querySelector("#overlay").style.display = "block"
+
+            let participant = document.getElementById("participant").value;
+            let tel = document.getElementById("tel").value;
+            let nom = document.getElementById("nom").value;
+
+            valeur = tel + " ; " + participant + " ; " + nom;
+            qr.value = valeur;
+
+            switch (participant) {
+
+                case "Coach":
+                    document.querySelector("#badge_img_Coach").style.display ="block"
+
+                    document.querySelector("#badge_img_Visiteur").style.display ="none"
+                    document.querySelector("#badge_img_Entrepreneur").style.display ="none"
+                    document.querySelector("#badge_img_Sponsor").style.display ="none"
+                    break
+
+                case "Entrepreneur":
+                    document.querySelector("#badge_img_Entrepreneur").style.display ="block"
+
+                    document.querySelector("#badge_img_Visiteur").style.display ="none"
+                    document.querySelector("#badge_img_Coach").style.display ="none"
+                    document.querySelector("#badge_img_Sponsor").style.display ="none"
+                    break
+                case "Sponsor":
+                    document.querySelector("#badge_img_Sponsor").style.display ="block"
+
+                    document.querySelector("#badge_img_Visiteur").style.display ="none"
+                    document.querySelector("#badge_img_Coach").style.display ="none"
+                    document.querySelector("#badge_img_Entrepreneur").style.display ="none"
+                    break
+                case "Visiteur":
+
+                    document.querySelector("#badge_img_Visiteur").style.display ="block"
+
+                    document.querySelector("#badge_img_Sponsor").style.display ="none"
+                    document.querySelector("#badge_img_Coach").style.display ="none"
+                    document.querySelector("#badge_img_Entrepreneur").style.display ="none"
+                    break
+            }
+
+
+            setTimeout(() => {
+                document.querySelector("#overlay").style.display = "none"
+                document.querySelector("#qr_code_gen").classList.remove("hidden");
+                topFunction()
+            }, 2000);
+
+        });
+
+        // code pour enregistre en html to image jpg 
+        function autoclick() {
+            $("#btn-Convert-Html2Image").click()
+        }
+        $(document).ready(function () {
+
+            $("#btn-Convert-Html2Image").on('click', function () {
+                html2canvas(document.getElementById("qr_badge"),
+                    {
+                        allowTaint: true,
+                        useCORS: true,
+
+                        scale: 5
+                    }).then(function (canvas) {
+                        var anchorTag = document.createElement("a");
+                        document.body.appendChild(anchorTag);
+                        let nom = document.getElementById("nom").value;
+                        //    document.getElementById("previewImg").appendChild(canvas);
+                        anchorTag.download = nom + "_cinolu_L-Impact_bagde.jpg";
+                        anchorTag.href = canvas.toDataURL();
+                        anchorTag.target = '_blank';
+                        anchorTag.click();
+                    });
+            });
+
+        });
+
+        window.addEventListener("offline", (event) => {
+            document.getElementById("overlay-connection").style.display = "block"
+
+        });
+
+        window.addEventListener("online", (event) => {
+            document.getElementById("overlay-connection").style.display = "none"
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

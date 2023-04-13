@@ -1,6 +1,6 @@
 AOS.init();
       // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () { scrollFunction() };
+      //window.onscroll = function () { scrollFunction() };
 
       const counters = document.querySelectorAll('.counter')
       counters.forEach(counter => {
@@ -23,33 +23,41 @@ AOS.init();
       })
 
 
-      function GetMap() {
-         var map = new Microsoft.Maps.Map('#map', {
-
-            center: new Microsoft.Maps.Location(-11.674282, 27.479535),
-            zoom: 19,
-            credentials: 'AgqxbyOj48ZmO52UrrOkGyImBfPE_VWjJcsO0vfclUBA7O13Hi85Sd7njYrFEzty',
-            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-
-         });
-         var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
-         var layer = new Microsoft.Maps.Layer();
-         layer.add(pushpin);
-         map.layers.insert(layer);
-      }
+      
 
 
-      window.addEventListener("load", () => {
+      window.addEventListener('load', function () {
          new Glider(document.querySelector('.glider'), {
-            slidesToShow: 3,
-            dots: '#dots',
-            draggable: true,
-            arrows: {
-               prev: '.glider-prev',
-               next: '.glider-next'
-            }
+             slidesToShow: 1.5,
+             dots: '.dots',
+             arrows: {
+                 prev: '.glider-prev',
+                 next: '.glider-next'
+             },
+             responsive: [
+                 {
+                     // screens greater than >= 775px
+                     breakpoint: 1400,
+                     settings: {
+                         // Set to `auto` and provide item width to adjust to viewport
+                         slidesToShow: 6,
+                         slidesToScroll: 'auto',
+                         itemWidth: 250,
+                         duration: 0.25
+                     }
+                 }, {
+                     // screens greater than >= 1024px
+                     breakpoint: 768,
+                     settings: {
+                         slidesToShow: 5,
+                         slidesToScroll: 1,
+                         itemWidth: 200,
+                         duration: 0.25
+                     }
+                 }
+             ]
          });
-      })
+     });
 
       const open_accordion = (v) => {
          const accordion = document.querySelectorAll(".accordion")

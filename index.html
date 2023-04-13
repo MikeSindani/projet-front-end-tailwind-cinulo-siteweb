@@ -3,9 +3,13 @@
 
 <head>
    <meta charset="utf-8" />
-   <title>Cinolu</title>
+   <title>Home | CINOLU </title>
    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+   <!-- links for file -->
+   <link rel="icon" href="logo/Cinolu-removebg-preview vert.png">
    <link rel="stylesheet" href="output.css">
+
+   <!-- links librairie -->
    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css'
       integrity='sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=='
       crossorigin='anonymous' />
@@ -29,6 +33,8 @@
    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
       crossorigin="anonymous">
 
+
+
    <style>
 
    </style>
@@ -36,37 +42,47 @@
 
 <body>
    <header>
-
-
       <div
-         class="md:h-20 w-full bg-primary-color  text-white flex flex-col md:flex-row gap-5 p-5 md:p-0 md:justify-around justify-center items-center">
+         class="md:h-20 w-full bg-primary-color text-white flex flex-col md:flex-row gap-5 p-5 md:p-0 md:justify-around justify-center items-center">
          <div class="text-white md:flex gap-3 hidden">
-            <div><a href=""><ion-icon name="logo-facebook"></ion-icon></a></div>
-            <div><a href=""><ion-icon name="logo-twitter"></ion-icon></a></div>
-            <div><a href=""><ion-icon name="logo-instagram"></ion-icon></a></div>
-            <div><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></div>
-            <div><a href=""><ion-icon name="logo-youtube"></ion-icon></a></div>
+            <div><a href="https://web.facebook.com/cinolu/" target="_blank"><ion-icon
+                     name="logo-facebook"></ion-icon></a></div>
+            <div><a href=""><ion-icon name="logo-twitter" target="_blank"></ion-icon></a></div>
+            <div><a href="https://www.instagram.com/explore/tags/cinolu/" target="_blank"><ion-icon
+                     name="logo-instagram"></ion-icon></a></div>
+            <div><a href="https://www.linkedin.com/company/cinolu/" target="_blank"><ion-icon
+                     name="logo-linkedin"></ion-icon></a></div>
+            <div><a href="https://www.youtube.com/@cinolu6261" target="_blank"><ion-icon
+                     name="logo-youtube"></ion-icon></a></div>
          </div>
          <div class="text-white font-poppins  text-xl font-bold ">
             <a href=""><img src="logo/Cinolu-removebg-preview.png" width="50" alt=""></a>
 
          </div>
          <div class="text-white md:flex items-center gap-3 hidden font-bold">
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-            <a href=""><i class="fa fa-phone"></i></a>
-            <a href=""><span>+243970131238</span></a>
+            <a href="https://wa.me/243970131238?"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+243970131238"><i class="fa fa-phone"></i></a>
+            <a href="tel:+243970131238"><span>+243970131238</span></a>
          </div>
          <nav id="nav__menu__open" class="hidden md:hidden">
-            <div class="flex flex-col gap-5 justify-center items-center p-5">
+            <div class="flex flex-col gap-5 justify-center items-center p-5 ">
                <div class="text-white font-semibold "><a href="">Accueil</a></div>
-               <div class="text-white font-semibold"><a href="">Événements</a></div>
-               <div class="text-white font-semibold"><a href="">Programmes </a></div>
-               <div class="text-white font-semibold"><a href="">Blog</a></div>
-               <div class="text-black font-bold text-lg"><a href="">Se Connecter</a></div>
+               <div class="text-white font-semibold hidden"><a href="">Événements</a></div>
+               <!-- debut menu provisoire -->
+               <div class="text-white font-semibold "><a href="#Ce_que_nous_faisons">A propos de nous </a></div>
+               <div class="text-white font-semibold "><a href="#programmes">Nos programmes</a></div>
+               <div class="text-white font-semibold "><a href="#equipe">Notre equipe</a></div>
+               <div class="text-white font-semibold "><a href="#Où_nous_trouver">Où nous trouver ?</a></div>
+               <div class="text-white font-semibold "><a href="#Galerie_photos">Galerie photos</a></div>
+               <!-- fin menu provisoire -->
+               <div class="text-white font-semibold   hidden"><a href="">Programmes </a></div>
+               <div class="text-white font-semibold hidden"><a href="">Blog</a></div>
+               <div class="text-black font-bold text-lg hidden"><a href="">Se Connecter</a></div>
+               <div class="text-black font-semibold py-2 px-8 rounded-full bg-white "><a href="#footer">Contacter</a>
 
-            </div>
-            <div class="bg-secondary-color py-3 px-5 rounded-full hidden"><a class="flex items-center justify-center"
-                  href="tel:+243970131238"><span>+243970131238</span></a></div>
+               </div>
+               <div class="bg-secondary-color py-3 px-5 rounded-full hidden"><a class="flex items-center justify-center"
+                     href="tel:+243970131238"><span>+243970131238</span></a></div>
          </nav>
       </div>
       <div class="banner  w-full h-screen  relative overflow-hidden">
@@ -83,11 +99,19 @@
                <nav>
                   <div class="hidden md:flex flex-row gap-5 justify-center items-center">
                      <div class="text-white font-semibold "><a href="">Accueil</a></div>
-                     <div class="text-white font-semibold"><a href="">Événements</a></div>
-                     <div class="text-white font-semibold"><a href="">Programmes </a></div>
-                     <div class="text-white font-semibold"><a href="">Blog</a></div>
-                     <div class="text-primary-color font-semibold"><a href="">Se Connecter</a></div>
-                     <div class="text-black font-semibold py-2 px-8 rounded-full bg-white"><a href="">Contacter</a>
+                     <!-- debut menu provisoire -->
+                     <div class="text-white font-semibold "><a href="#Ce_que_nous_faisons">A propos de nous </a></div>
+                     <div class="text-white font-semibold "><a href="#programmes">Nos programmes</a></div>
+                     <div class="text-white font-semibold "><a href="#equipe">Notre equipe</a></div>
+                     <div class="text-white font-semibold "><a href="#Où_nous_trouver">Où nous trouver ?</a></div>
+                     <div class="text-white font-semibold "><a href="#Galerie_photos">Galerie photos</a></div>
+                     <!-- fin menu provisoire -->
+                     <div class="text-white font-semibold   hidden"><a href="">Événements</a></div>
+                     <div class="text-white font-semibold   hidden"><a href="">Programmes </a></div>
+                     <div class="text-white font-semibold  hidden"><a href="">Blog</a></div>
+                     <div class="text-primary-color font-semibold hidden"><a href="">Se Connecter</a></div>
+                     <div class="text-black font-semibold py-2 px-8 rounded-full bg-white "><a
+                           href="#footer">Contacter</a>
                      </div>
                   </div>
                   <div
@@ -104,7 +128,8 @@
                      <img src="logo/Cinolu-removebg-preview vert.png" width="140" alt="">
                   </div>
                   <div class="flex flex-col gap-5 text-right">
-                     <h1 class="text-white text-5xl"> Co-créons <span class="text-primary-color">votre projet</span>
+                     <h1 class="text-white text-4xl md:text-5xl"> Co-créons <span class="text-primary-color">votre
+                           projet</span>
                      </h1>
                      <p class="text-white text-right text-md">
                         Nous vous accompagnons avec les compétences, les ressources <br>
@@ -113,13 +138,17 @@
                         ​​
                      </p>
                      <div class="text-white flex justify-end items-center gap-5 md:hidden">
-                        <div><a href=""><ion-icon name="logo-facebook"></ion-icon></a></div>
-                        <div><a href=""><ion-icon name="logo-twitter"></ion-icon></a></div>
-                        <div><a href=""><ion-icon name="logo-instagram"></ion-icon></a></div>
-                        <div><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></div>
-                        <div><a href=""><ion-icon name="logo-youtube"></ion-icon></a></div>
-                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href=""><i class="fa fa-phone"></i></a>
+                        <div><a href="https://web.facebook.com/cinolu/" target="_blank"><ion-icon
+                                 name="logo-facebook"></ion-icon></a></div>
+                        <div><a href=""><ion-icon name="logo-twitter" target="_blank"></ion-icon></a></div>
+                        <div><a href="https://www.instagram.com/explore/tags/cinolu/" target="_blank"><ion-icon
+                                 name="logo-instagram"></ion-icon></a></div>
+                        <div><a href="https://www.linkedin.com/company/cinolu/" target="_blank"><ion-icon
+                                 name="logo-linkedin"></ion-icon></a></div>
+                        <div><a href="https://www.youtube.com/@cinolu6261" target="_blank"><ion-icon
+                                 name="logo-youtube"></ion-icon></a></div>
+                        <a href="https://wa.me/243970131238?"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+243970131238"><i class="fa fa-phone"></i></a>
                      </div>
                   </div>
                </div>
@@ -130,23 +159,28 @@
          <div
             class="bg-white shadow-2xl flex flex-wrap justify-between p-10 w-2/3 gap-0 relative -top-8 sm:-top-16 rounded-md">
             <div class="flex flex-col text-center">
-               <div class="text-black text-6xl font-bold"> <span class="counter" data-target="1000"></span>+ </div>
+               <div class="text-black text-4xl md:text-6xl font-bold"> <span class="counter" data-target="1000"></span>+
+               </div>
                <div class="text-secondary-color">Bénéficiaires</div>
             </div>
             <div class="flex flex-col text-center">
-               <div class="text-black text-6xl font-bold"><span class="counter" data-target="150"></span>+</div>
+               <div class="text-black text-4xl md:text-6xl font-bold"><span class="counter" data-target="150"></span>+
+               </div>
                <div class="text-secondary-color">Projets</div>
             </div>
             <div class="flex flex-col text-center">
-               <div class="text-black text-6xl font-bold"><span class="counter" data-target="40"></span>+</div>
+               <div class="text-black text-4xl md:text-6xl font-bold"><span class="counter" data-target="40"></span>+
+               </div>
                <div class="text-secondary-color">Partenaires</div>
             </div>
             <div class="flex flex-col text-center">
-               <div class="text-black text-6xl font-bold"><span class="counter" data-target="15"></span>+</div>
+               <div class="text-black text-4xl md:text-6xl font-bold"><span class="counter" data-target="15"></span>+
+               </div>
                <div class="text-secondary-color">Mentors & Coachs</div>
             </div>
             <div class="flex flex-col text-center">
-               <div class="text-black text-6xl font-bold"><span class="counter" data-target="8"></span>+</div>
+               <div class="text-black text-4xl md:text-6xl font-bold"><span class="counter" data-target="8"></span>+
+               </div>
                <div class="text-secondary-color">Programmes</div>
             </div>
          </div>
@@ -154,7 +188,7 @@
 
    </header>
    <section class="bg-third-color flex flex-col-reverse md:flex-row justify-center items-center sm:p-10 w-full">
-      <div class="flex flex-col gap-10 w-2/3" data-aos="fade-up" data-aos-duration="3000">
+      <div class="flex flex-col gap-10 w-2/3" data-aos="zoom-in" data-aos-duration="2000">
          <h1 class="text-5xl text-primary-color">Votre hub d'innovation one stop</h1>
          <div class="flex flex-col ">
             <p>Rejoindre un Tech hub? un incubateur ou un accélérateur? </p> <br>
@@ -175,16 +209,16 @@
             alt="">
       </div>
    </section>
-   <section class="bg-white flex flex-col items-center  sm:p-10">
+   <section id="Ce_que_nous_faisons" class="bg-white flex flex-col items-center  sm:p-10">
       <div class="flex items-center justify-center my-10">
-         <h1 class="md:text-5xl text-4xl text-black text-center">Ce que <span class="text-primary-color">nous
-               faisons</span> 
+         <h1 class="text-3xl md:text-4xl  text-black text-center">Ce que <span class="text-primary-color">nous
+               faisons</span>
          </h1>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 p-3 ">
          <div class="text-center flex flex-col shadow-xl text-slate-700 bg-card-innovation p-12 gap-5"
-            data-aos="flip-up" data-aos-duration="3000">
+            data-aos="flip-up" data-aos-duration="2000">
             <h1 class="text-3xl  font-bold">Camps d'innovation</h1>
             <p>Apprenez des compétences et mettez toute
                suite a l'œuvre pour construire des prototypes
@@ -225,17 +259,17 @@
       </div>
 
    </section>
-   <section
+   <section id="programmes"
       class="bg-third-color flex flex-col md:flex-row justify-center items-center sm:p-10 w-full border-b-8 border-secondary-color ">
       <div class="flex flex-col gap-10 items-center justify-center my-10 pb-40">
 
-         <h1 class="text-4xl md:text-5xl text-black text-center">Nos programmes et <span
-               class="text-primary-color">Activités</span>
+         <h1 class="text-3xl md:text-4xl text-black text-center">Nos programmes et <span
+               class="text-primary-color">activités</span>
          </h1>
          <div class="grid grid-cols-1  md:grid-cols-3 gap-5 p-3 place-items-center">
 
 
-            <div class="flex flex-col gap-3 place-items-center w-80" data-aos="fade-right">
+            <div class="flex flex-col gap-3 place-items-center w-80" data-aos="zoom-in">
                <div class="bg-white w-32 h-32 shadow-xl rounded-full p-3 grid place-items-center">
                   <svg viewBox="0 0 24 24" id="Line" xmlns="http://www.w3.org/2000/svg" fill="#43842B">
                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -264,7 +298,7 @@
                </div>
             </div>
 
-            <div class="flex flex-col gap-3 place-items-center w-80" data-aos="fade-up">
+            <div class="flex flex-col gap-3 place-items-center w-80" data-aos="zoom-in">
                <div class="bg-white w-32 h-32 shadow-xl rounded-full p-3 grid place-items-center">
                   <i class="fa fa-laptop fa-4x  " aria-hidden="true"></i>
                </div>
@@ -280,7 +314,7 @@
                </div>
             </div>
 
-            <div class="flex flex-col gap-3 place-items-center w-80" data-aos="fade-left">
+            <div class="flex flex-col gap-3 place-items-center w-80" data-aos="zoom-in">
                <div class="bg-white w-32 h-32 shadow-xl rounded-full p-3 grid place-items-center">
                   <i class="fa fa-star fa-4x " aria-hidden="true"></i>
                </div>
@@ -359,11 +393,9 @@
       <div class="flex flex-col md:flex-row gap-10 items-center justify-center my-10 md:h-20 pb-20  ">
 
          <div class=" flex flex-col gap-3 bg-white shadow-xl relative md:-top-24 z-10 w-80 " data-aos="zoom-in"
-            data-aos-duration="3000">
+            data-aos-duration="2000">
             <div>
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  alt="" width="400">
+               <img src="img/about-mission.jpg" alt="" width="400">
             </div>
             <div class="text-black text-3xl font-bold p-2">Notre mission</div>
             <div class="text-slate-500 p-2 w-80">
@@ -377,9 +409,7 @@
          <div class=" flex flex-col gap-3 bg-white shadow-xl  relative md:-top-24 w-80" data-aos="zoom-in"
             data-aos-duration="2000">
             <div>
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  alt="" width="400">
+               <img src="img/about-plan.jpg" alt="" width="400">
             </div>
             <div class="text-black text-3xl font-bold p-2">Nos Valeurs</div>
             <div class="text-slate-500 p-2 w-80">
@@ -395,9 +425,7 @@
          <div class="flex flex-col gap-3 bg-white shadow-xl relative md:-top-24 w-80" data-aos="zoom-in"
             data-aos-duration="1000">
             <div>
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  alt="" width="400">
+               <img src="img/about-vision.jpg" alt="" width="400">
             </div>
             <div class="text-black text-3xl font-bold p-2">Notre équipe</div>
             <div class="text-slate-500 p-2 w-80">
@@ -430,7 +458,7 @@
                   style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));width: 100%;height: 80vh !important;">
                   <div class="flex justify-center items-center  p-10 ">
                      <div class="flex flex-col  gap-5 text-right">
-                        <h1 class="text-primary-color text-5xl">Coaching personnalisé et immersif</h1>
+                        <h1 class="text-primary-color text-4xl">Coaching personnalisé et immersif</h1>
                         <p class="text-white text-right text-lg">
                            Nous vous accompagnons avec les compétences, les ressources <br>
 
@@ -452,7 +480,7 @@
                   style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));width: 100%;height: 80vh !important;">
                   <div class="grid place-items-center p-10 ">
                      <div class="flex flex-col  gap-5 text-right">
-                        <h1 class="text-primary-color text-5xl">Cohorts</h1>
+                        <h1 class="text-primary-color text-4xl">Cohorts</h1>
                         <p class="text-white text-left text-lg">
                            A tout moment entrer en contact avec votre&nbsp; <br> conseiller grâce a notre espace virtuel
                            intégré- vous n'allez pas en revenir !
@@ -473,7 +501,7 @@
                   style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));width: 100%;height: 80vh !important;">
                   <div class="flex justify-center  p-10 ">
                      <div class="flex flex-col  gap-5 text-right">
-                        <h1 class="text-primary-color text-5xl">Parcours structurés, intensifs et&nbsp; pratiques&nbsp;
+                        <h1 class="text-primary-color text-4xl">Parcours structurés, intensifs et&nbsp; pratiques&nbsp;
                         </h1>
                         <p class="text-white text-right text-lg">
                            Notre boite a outils offre un parcours claire ,&nbsp; <br> des étapes spécifiques pour
@@ -499,23 +527,22 @@
    </section>
 
    <!-- ------------------------------------------------------------------ Notre Equipe --------------------------------------------------------------------------------------->
-   <section class="bg-third-color flex flex-col md:flex-row justify-center items-center sm:p-10 w-full ">
+   <section id="equipe" class="bg-third-color flex flex-col md:flex-row justify-center items-center sm:p-10 w-full ">
       <div class="flex flex-col gap-10 items-center justify-center my-10">
-         <h1 class="text-4xl md:text-5xl text-black text-center">Notre <span class="text-primary-color">Equipes</span>
+         <h1 class="text-3xl md:text-4xl text-black text-center">Notre <span class="text-primary-color">equipe</span>
          </h1>
          <!-- ------------------------- start Card equipe ------------------------------------->
-         <div class="flex flex-col sm:flex-row gap-5">
+         <div class="grid grid-cols-1 md:grid-cols-3  gap-5">
             <!-- ------------------------- Card equipe item------------------------------------->
-            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 border-secondary-color"
-               data-aos="zoom-in" data-aos-duration="2000">
+            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 " data-aos="zoom-in"
+               data-aos-duration="2000">
                <div class="grid place-items-center rounded-full">
-                  <img class="rounded-full border-8 border-primary-color" style="border-radius: 100%;"
-                     src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-.jpg" alt=""
-                     width="350" height="300">
+                  <img class="rounded-full border-4 border-primary-color" style="border-radius: 100%;"
+                     src="profil/mrBerry.jpg" alt="" width="200" height="200">
                </div>
                <div class="text-black text-center text-3xl font-bold p-2">M. Berry</div>
-               <div class="text-secondary-color text-center text-md font-bold p-2">Coach</div>
-               <div class="text-slate-500 p-2 ">
+               <div class="text-secondary-color text-center text-md font-bold p-2">Managing director</div>
+               <div class="text-slate-500 p-2 hidden">
                   L'homme au cœur de la démarche
                   avec un accent sur l'expérience positive
                   de parties prenantes de notre communauté
@@ -524,16 +551,16 @@
                </div>
             </div>
             <!-- ------------------------- Card equipe item------------------------------------->
-            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 border-secondary-color"
-               data-aos="zoom-in" data-aos-duration="2000">
+            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 " data-aos="zoom-in"
+               data-aos-duration="2000">
                <div class="grid place-items-center rounded-full">
-                  <img class="rounded-full border-8 border-primary-color" style="border-radius: 100%;"
-                     src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-.jpg" alt=""
-                     width="350" height="300">
+                  <img class="rounded-full border-4 border-primary-color" style="border-radius: 100%;"
+                     src="profil/mr josue.png" alt="" width="200" height="200">
                </div>
                <div class="text-black text-center text-3xl font-bold p-2">M. Josue</div>
-               <div class="text-secondary-color text-center text-md font-bold p-2">Coach</div>
-               <div class="text-slate-500 p-2 ">
+               <div class="text-secondary-color text-center text-md font-bold p-2">Planning Manager
+               </div>
+               <div class="text-slate-500 p-2 hidden">
                   L'homme au cœur de la démarche
                   avec un accent sur l'expérience positive
                   de parties prenantes de notre communauté
@@ -542,16 +569,15 @@
                </div>
             </div>
             <!-- ------------------------- Card equipe item------------------------------------->
-            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 border-secondary-color"
-               data-aos="zoom-in" data-aos-duration="2000">
+            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 " data-aos="zoom-in"
+               data-aos-duration="2000">
                <div class="grid place-items-center rounded-full">
-                  <img class="rounded-full border-8 border-primary-color" style="border-radius: 100%;"
-                     src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-.jpg" alt=""
-                     width="350" height="300">
+                  <img class="rounded-full border-4 border-primary-color" style="border-radius: 100%;"
+                     src="profil/mme joyce.jpeg" alt="" width="200" height="200">
                </div>
                <div class="text-black text-center text-3xl font-bold p-2">Mme Joyce</div>
-               <div class="text-secondary-color text-center text-md font-bold p-2">Coach</div>
-               <div class="text-slate-500 p-2 ">
+               <div class="text-secondary-color text-center text-md font-bold p-2">Planning Manager</div>
+               <div class="text-slate-500 p-2 hidden">
                   L'homme au cœur de la démarche
                   avec un accent sur l'expérience positive
                   de parties prenantes de notre communauté
@@ -560,16 +586,49 @@
                </div>
             </div>
             <!-- ------------------------- Card equipe item------------------------------------->
-            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 border-secondary-color"
-               data-aos="zoom-in" data-aos-duration="2000">
+            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 " data-aos="zoom-in"
+               data-aos-duration="2000">
                <div class="grid place-items-center rounded-full">
-                  <img class="rounded-full border-8 border-primary-color" style="border-radius: 100%;"
-                     src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-.jpg" alt=""
-                     width="350" height="300">
+                  <img class="rounded-full border-4 border-primary-color" style="border-radius: 100%;"
+                     src="profil/roddy.jpeg" alt="" width="200" height="200">
                </div>
                <div class="text-black text-center text-3xl font-bold p-2">Mr Rodriguez</div>
+               <div class="text-secondary-color text-center text-md font-bold p-2">Invente Manager</div>
+               <div class="text-slate-500 p-2 hidden">
+                  L'homme au cœur de la démarche
+                  avec un accent sur l'expérience positive
+                  de parties prenantes de notre communauté
+                  en s'appuyant sur l'Equité, l'Honnetéte ,
+                  Le Ubuntu et L'Ouverture d'esprit
+               </div>
+            </div>
+            <!-- ------------------------- Card equipe item------------------------------------->
+            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 " data-aos="zoom-in"
+               data-aos-duration="2000">
+               <div class="grid place-items-center rounded-full">
+                  <img class="rounded-full border-4 border-primary-color" style="border-radius: 100%;"
+                     src="profil/mmeGrace.jpeg" alt="" width="200" height="200">
+               </div>
+               <div class="text-black text-center text-3xl font-bold p-2">Mme Gracia</div>
+               <div class="text-secondary-color text-center text-md font-bold p-2">Office Manager</div>
+               <div class="text-slate-500 p-2 hidden">
+                  L'homme au cœur de la démarche
+                  avec un accent sur l'expérience positive
+                  de parties prenantes de notre communauté
+                  en s'appuyant sur l'Equité, l'Honnetéte ,
+                  Le Ubuntu et L'Ouverture d'esprit
+               </div>
+            </div>
+            <!-- ------------------------- Card equipe item------------------------------------->
+            <div class="w-80 flex flex-col gap-1 bg-white relative p-10 border-2 hidden" data-aos="zoom-in"
+               data-aos-duration="2000">
+               <div class="grid place-items-center rounded-full">
+                  <img class="rounded-full border-4 border-primary-color" style="border-radius: 100%;"
+                     src="profil/mradoni.png" alt="" width="200" height="200">
+               </div>
+               <div class="text-black text-center text-3xl font-bold p-2">Mme Sylvie</div>
                <div class="text-secondary-color text-center text-md font-bold p-2">Coach</div>
-               <div class="text-slate-500 p-2 ">
+               <div class="text-slate-500 p-2 hidden">
                   L'homme au cœur de la démarche
                   avec un accent sur l'expérience positive
                   de parties prenantes de notre communauté
@@ -582,9 +641,10 @@
       </div>
    </section>
 
-   <section class="bg-secondary-color h-20  flex flex-col md:flex-row justify-start items-center sm:p-10 w-full ">
+   <section
+      class="bg-primary-color h-20  flex flex-col md:flex-row justify-start items-center sm:p-10 w-full shadow-xl">
       <div class="flex flex-col gap-10  justify-start my-10 ">
-         <h1 class="text-3xl md:text-4xl text-white text-left">Vous serez entouré des meilleurs dans leurs
+         <h1 class="text-2xl md:text-3xl text-white text-left">Vous serez entouré des meilleurs dans leurs
             domaines...</span>
          </h1>
       </div>
@@ -592,7 +652,7 @@
    <!--==================================================================== Nos partenaires ========================================================================================-->
    <section class="bg-white flex flex-col md:flex-row justify-center items-center sm:p-10 w-full ">
       <div class="flex flex-col gap-10 items-center justify-center my-10 ">
-         <h1 class="text-4xl md:text-5xl text-black text-center flex items-center gap-2">
+         <h1 class="text-3xl md:text-4xl text-black text-center flex items-center gap-2">
             <span class="text-red-600"><i class="fa-solid fa-heart"></i></span> Nos<span class="text-primary-color">
                Références</span>
 
@@ -610,10 +670,10 @@
    </section>
    <!--==================================================================== ou nous trouver =========================================================================-->
 
-   <section class="bg-white flex flex-col md:flex-row justify-center items-center w-full pt-10  ">
+   <section id="Où_nous_trouver" class="bg-white flex flex-col md:flex-row justify-center items-center w-full pt-10  ">
       <div class="flex flex-col gap-10  w-full  ">
          <!-- ------------------------- titre  ------------------------------------->
-         <h1 class="text-4xl md:text-5xl text-black text-center ">Où Nous<span class="text-primary-color"> trouver
+         <h1 class="text-3xl md:text-4xl text-black text-center ">Où nous<span class="text-primary-color"> trouver
                ?</span>
          </h1>
          <!-- ------------------------- ADRESSE AND MAPS  ------------------------------------->
@@ -629,19 +689,23 @@
                <div>
                   <h2 class="text-white  text-2xl md:text-3xl">Ecrivez-Nous</h2>
                   <div class="p-2">
-                     <form class="flex gap-5 flex-col justify-center ">
+                     <form class="flex gap-5 flex-col justify-center "
+                        action="https://formsubmit.co/reception@cinolu.org" method="POST">
                         <input
                            class="bg-secondary-color p-2 border-2 border-solid rounded-md w-full border-white text-white text-sm"
-                           type="text" name="text" placeholder="Enter Votre Name" />
+                           type="text" name="name" placeholder="Enter Votre Name" />
                         <input
                            class="bg-secondary-color p-2 border-2 border-solid rounded-md w-full border-white text-white text-sm"
                            type="email" name="email" placeholder="Enter Votre Email" />
                         <input
                            class="bg-secondary-color p-2 border-2 border-solid rounded-md w-full border-white text-white text-sm"
-                           type="email" name="email" placeholder="Enter Votre Numero de Telephone" />
+                           type="tel" name="phone" placeholder="Enter Votre Numero de Telephone" />
+                        <input type="hidden" name="_autoresponse" value="CINOLU Merci Pour Votre message!">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/public/send_mail.html">
                         <textarea
                            class="bg-secondary-color p-2 border-2 border-solid rounded-md w-full border-white text-white text-sm"
-                           placeholder="Message"></textarea>
+                           placeholder="Message" name="message"></textarea>
                         <button
                            class="bg-secondary-color p-2 border-2 border-solid rounded-md  border-white  text-white w-20 hover:bg-white hover:text-black transition  text-sm">Envoyer</button>
                      </form>
@@ -653,70 +717,52 @@
          </div>
       </div>
    </section>
-   <section class="bg-white flex flex-col md:flex-row justify-center items-center sm:p-10 w-full ">
+   <section id="Galerie_photos" class="bg-white flex flex-col md:flex-row justify-center items-center sm:p-10 w-full ">
       <div class="flex flex-col gap-10 items-center justify-center my-10 pb-40">
-         <h1 class="text-4xl md:text-5xl text-black text-center">Notre Galerie<span class="text-primary-color">Photo
+         <h1 class="text-3xl md:text-4xl text-black text-center"> Notre Galerie <span class="text-primary-color"> photos
             </span>
          </h1>
 
+
          <div class="row">
             <div class="column" data-aos="zoom-in">
-               <img
-                  src="https://images.pexels.com/photos/8653655/pexels-photo-8653655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  style="width:100%">
+               <img src="photo/cinolu (10).png" style="width:100%">
+               <img src="photo/cinolu (3).jpg" style="width:100%">
+               <img src="photo/cinolu (2).jpg" style="width:100%">
+               <img src="photo/cinolu (23).png" style="width:100%">
 
             </div>
             <div class="column" data-aos="zoom-in" data-aos-duration="1000">
 
-               <img
-                  src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="https://images.pexels.com/photos/8653655/pexels-photo-8653655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  style="width:100%">
+               <img src="photo/cinolu (6).jpg" style="width:100%">
+               <img src="photo/cinolu (25).jpg" style="width:100%">
+               <img src="photo/cinolu (28).jpg" style="width:100%">
+               <img src="photo/cinolu (12).jpg" style="width:100%">
 
             </div>
             <div class="column" data-aos="zoom-in" data-aos-duration="800">
-               <img
-                  src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  style="width:100%">
-               <img
-                  src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
+               <img src="photo/cinolu (15).png" style="width:100%">
+               <img src="photo/cinolu (22).png" style="width:100%">
+               <img src="photo/cinolu (30).jpg" style="width:100%">
+               <img src="photo/cinolu (18).jpg" style="width:100%">
+
 
             </div>
             <div class="column" data-aos="zoom-in" data-aos-duration="500">
-               <img
-                  src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="https://images.pexels.com/photos/8653655/pexels-photo-8653655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style="width:100%">
-               <img
-                  src="img/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg"
-                  style="width:100%">
-
+               <img src="photo/cinolu (1).jpg" style="width:100%">
+               <img src="photo/cinolu (24).jpg" style="width:100%">
+               <img src="photo/cinolu (32).jpg" style="width:100%">
+               <img src="photo/cinolu (19).jpg" style="width:100%">
+               <img src="photo/cinolu (11).jpg" style="width:100%">
             </div>
 
          </div>
       </div>
    </section>
-   <section class="bg-third-color flex flex-col md:flex-row justify-center items-center sm:p-10 w-full ">
+   <section class="bg-third-color flex flex-col md:flex-row justify-center items-center sm:p-10 w-full hidden">
       <div class="flex flex-col gap-10 items-center justify-center my-10 pb-40">
-         <h1 class="text-4xl md:text-5xl text-black  flex flex-wrap items-center gap-2 text-center"><span
-               class="text-primary-color">Questions</span> <span>Fréquemment posées</span>  
+         <h1 class="text-3xl md:text-4xl text-black  flex flex-wrap items-center gap-2 text-center"><span
+               class="text-primary-color">Questions</span> <span>fréquemment posées</span>
          </h1>
          <div>
             <div class="">
@@ -799,22 +845,22 @@
       <div class="px-10 py-3 text-lg bg-secondary-color text-white rounded-md flex gap-2 items-center"><i
             class="fa fa-phone"></i><a href="tel:">Contacter</a></div>
    </section>
-   <footer class="bg-secondary-color flex flex-col ">
+   <footer id="footer" class="bg-secondary-color flex flex-col ">
 
       <section class=" flex flex-col md:flex-row justify-around p-5 md:h-60">
          <div class="flex flex-col pl-4 gap-3">
-            <h2 class=" text-white text-2xl">Comment pouvons nous aider ?</h2>
-            <h1 class=" text-white text-4xl font-bold pl-4">Contactez-nous à tout moment</h1>
+            <h2 class=" text-white text-xl">Comment pouvons nous aider ?</h2>
+            <h1 class=" text-white text-2xl font-bold pl-4">Contactez-nous à tout moment</h1>
          </div>
          <div class="flex flex-col p-2 gap-3">
-            <h2 class=" text-white text-2xl">Appelez-nous</h2>
-            <div class="pl-4"><a class=" text-white text-lg decoration-white decoration-solid" href="tel:+243811819504"><i
-                     class="fa fa-phone"></i> +243811819504
-                  </a>
+            <h2 class=" text-white text-xl">Appelez-nous</h2>
+            <div class="pl-4"><a class=" text-white text-lg decoration-white decoration-solid"
+                  href="tel:+243811819504"><i class="fa fa-phone"></i> +243811819504
+               </a>
             </div>
          </div>
          <div class="flex flex-col p-2 gap-3">
-            <h2 class=" text-white text-2xl ">Envoyez-nous un message</h2>
+            <h2 class=" text-white text-xl ">Envoyez-nous un message</h2>
             <div class="pl-4">
                <a class=" text-white text-lg decoration-white decoration-solid" href="mailto:reception@cinolu.org ">
                   <i class="fa-solid fa-envelope"></i> <span>reception@cinolu.org</span>
@@ -822,20 +868,24 @@
             </div>
          </div>
          <div class="flex flex-col p-2 gap-3">
-            <h2 class=" text-white text-2xl">Nous suivre</h2>
+            <h2 class=" text-white text-xl">Nous suivre</h2>
             <div class="text-white flex flex-wrap gap-3 pl-4">
-               <div><a href=""><ion-icon name="logo-facebook"></ion-icon></a></div>
-               <div><a href=""><ion-icon name="logo-twitter"></ion-icon></a></div>
-               <div><a href=""><ion-icon name="logo-instagram"></ion-icon></a></div>
-               <div><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></div>
-               <div><a href=""><ion-icon name="logo-youtube"></ion-icon></a></div>
+               <div><a href="https://web.facebook.com/cinolu/" target="_blank"><ion-icon
+                        name="logo-facebook"></ion-icon></a></div>
+               <div><a href=""><ion-icon name="logo-twitter" target="_blank"></ion-icon></a></div>
+               <div><a href="https://www.instagram.com/explore/tags/cinolu/" target="_blank"><ion-icon
+                        name="logo-instagram"></ion-icon></a></div>
+               <div><a href="https://www.linkedin.com/company/cinolu/" target="_blank"><ion-icon
+                        name="logo-linkedin"></ion-icon></a></div>
+               <div><a href="https://www.youtube.com/@cinolu6261" target="_blank"><ion-icon
+                        name="logo-youtube"></ion-icon></a></div>
             </div>
          </div>
 
       </section>
       <hr>
       <section class="flex justify-start md:justify-center md:items-center flex-col ">
-         <ul class="flex md:flex-row flex-col sm:list-disc gap-10 text-white text-lg p-5">
+         <ul class="flex md:flex-row flex-col sm:list-disc gap-10 text-white text-lg p-5 hidden">
             <li>Accueil</li>
             <li> À propos de nous</li>
             <li> Produits</li>
@@ -844,16 +894,16 @@
          </ul>
       </section>
       <section class="bg-quadro-color  h-20 w-full grid place-items-center ">
-         <p class="text-white text-lg">Copyright © Centre d'innovation de Lubumbashi </p>
+         <p class="text-white  text-md md:text-lg">Copyright © Centre d'innovation de Lubumbashi </p>
       </section>
    </footer>
 
 
    <div
       class="btn flex items-center gap-3 px-4 py-3 bg-secondary-color text-white fixed bottom-5 left-1/4 font-bold shadow-xl md:hidden z-50">
-      <span class=""><a href=""><i class="fa-brands fa-whatsapp"></i></a></span>
-      <span class="border-l-2 border-white  items-center px-3"><a href="tel:" class="flex gap-2 items-center"><i
-               class="fa fa-phone "></i>
+      <span class=""><a href="https://wa.me/243970131238?"><i class="fa-brands fa-whatsapp"></i></a></span>
+      <span class="border-l-2 border-white  items-center px-3"><a href="tel:+243970131238"
+            class="flex gap-2 items-center"><i class="fa fa-phone "></i>
             <span>Contacter-Nous</span></a> </span>
    </div>
 
@@ -868,6 +918,20 @@
       crossorigin='anonymous'></script>
    <script src="js/index.js"></script>
    <script>
+      function GetMap() {
+         var map = new Microsoft.Maps.Map('#map', {
+
+            center: new Microsoft.Maps.Location(-11.674282, 27.479535),
+            zoom: 19,
+            credentials: 'AgqxbyOj48ZmO52UrrOkGyImBfPE_VWjJcsO0vfclUBA7O13Hi85Sd7njYrFEzty',
+            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+
+         });
+         var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
+         var layer = new Microsoft.Maps.Layer();
+         layer.add(pushpin);
+         map.layers.insert(layer);
+      }
 
    </script>
 </body>
